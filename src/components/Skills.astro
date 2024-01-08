@@ -1,0 +1,43 @@
+---
+import dataSkills from "../services/dataSkills.json";
+const dataSkillsFront = dataSkills.filter(dataSkill => dataSkill.area === "font-end")
+const dataSkillsBack = dataSkills.filter(dataSkill => dataSkill.area === "back-end" && dataSkill.nombre !== 'JAVA' && dataSkill.nombre !== 'C#')
+---
+
+<section id="skills" class="max-w-[calc(990px+4rem)] w-full flex flex-col p-8 justify-center items-center pt-24">
+    <div class="w-full title-section relative text-4xl font-bold text-start">
+        <h1>Skills</h1>
+    </div>
+    <div class='w-full flex flex-col md:flex-row flex-wrap mt-16 justify-around'>
+        <div class='flex flex-col flex-1'>
+            <h3 class='text-center text-2xl font-bold'>FRON-END</h3>
+            <div class='flex flex-wrap p-4 gap-4 justify-center items-center'>
+                {
+                    dataSkillsFront.map(data => (
+                        <div class=' flex flex-col justify-center items-center min-w-[120px]'>
+                            <div class="h-[100px] flex items-center">
+                                <img class='w-[64px] h-auto' src={data.img} alt={data.nombre}>
+                            </div>
+                            <h4 class="text-center font-bold">{data.nombre}</h4>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+        <div class='flex flex-col flex-1 pt-7 md:pt-0'>
+            <h3 class='text-center text-2xl font-bold'>BACK-END</h3>
+            <div class='flex flex-wrap p-4 gap-4 justify-center items-center'>
+                {
+                    dataSkillsBack.map(data => (
+                        <div class=' flex flex-col items-center min-w-[120px]'>
+                            <div class="h-[100px] flex items-center">
+                                <img class='w-[64px] h-auto' src={data.img} alt={data.nombre}>
+                            </div>
+                            <h4 class="text-center font-bold">{data.nombre}</h4>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

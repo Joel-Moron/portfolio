@@ -1,0 +1,57 @@
+[
+    {
+        "nombre" : "HTML",
+        "img" : "https://i.ibb.co/PT59sg1/html.png",
+        "area": "font-end"
+    },
+    {
+        "nombre" : "CSS",
+        "img" : "https://i.ibb.co/7kdhF7N/css.png",
+        "area": "font-end"
+    },
+    {
+        "nombre" : "JAVASCRIPT",
+        "img" : "https://i.ibb.co/n07fqhh/javascript.png",
+        "area": "font-end"
+    },
+    {
+        "nombre" : "REACT JS",
+        "img" : "https://i.ibb.co/VVkSwkG/react.png",
+        "area": "font-end"
+    },
+    {
+        "nombre" : "BOOTSTRAP",
+        "img" : "https://i.ibb.co/x242F7Z/bootstrap-4.png",
+        "area": "font-end"
+    },
+    {
+        "nombre" : "PHP",
+        "img" : "https://i.ibb.co/xXPB8m9/php.png",
+        "area": "back-end"
+    },
+    {
+        "nombre" : "LARAVEL",
+        "img" : "https://i.ibb.co/4FQWNsb/laravel.png",
+        "area": "back-end"
+    },
+    {
+        "nombre" : "MYSQL",
+        "img" : "https://i.ibb.co/n85WHf8/mysql.png",
+        "area": "back-end"
+    },
+    {
+        "nombre" : "JAVA",
+        "img" : "https://i.ibb.co/WDyD2bp/java-14.png",
+        "area": "back-end"
+    },
+    {
+        "nombre" : "C#",
+        "img" : "https://i.ibb.co/zbKmGBh/c-4.png",
+        "area": "back-end"
+    },
+    {
+        "nombre" : "POSTGRE",
+        "img" : "https://i.ibb.co/44bkmzN/postgresql.png",
+        "area": "back-end"
+    }
+]

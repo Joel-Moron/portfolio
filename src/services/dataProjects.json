@@ -1,0 +1,42 @@
+[
+    {
+        "nombre" : "POKEDEX",
+        "descripcion" : "Aplicativo web que proporciona a los usuarios acceso a información detallada sobre los Pokémon",
+        "github" : "https://github.com/Joel-Moron/pokedex",
+        "url" : "https://mo-pokedex.netlify.app",
+        "tecnologias" : "React, Axios, PokeAPI, Tailwind",
+        "img" : "pokedex"
+    },
+    {
+        "nombre" : "REGISTRO DE ALUMNOS",
+        "descripcion" : "Una aplicación de escritorio que simplifica el registro de alumnos en escuelas. Con una interfaz intuitiva y generar informes. Ahorra tiempo y esfuerzo al personal escolar, facilitando la gestión de datos de los estudiantes.",
+        "github" : "https://github.com/Joel-Moron/Registro-Estudiantes",
+        "url" : "https://github.com/Joel-Moron/Registro-Estudiantes",
+        "tecnologias" : "C#, SQLServer, Crystal Report",
+        "img" : "producto1"
+    },
+    {
+        "nombre" : "BUSCADOR DE PELICULAS",
+        "descripcion" : "Una web para obtener información sobre películas. Simplemente introduce el título de la película que deseas encontrar. Encuentra rápidamente las películas que te interesan.",
+        "github" : "https://github.com/Joel-Moron/Buscador-Peliculas",
+        "url" : "https://buscador-de-pelis-m.netlify.app/",
+        "tecnologias" : "HTML, CSS, JavaScript, API",
+        "img" : "producto2"
+    },
+    {
+        "nombre" : "APP WEB DE CLIMA",
+        "descripcion" : "Una aplicación web de clima te brinda fácil acceso a la información climatica de diversos países. Simplemente ingresa el nombre del país y obtén al instante datos actualizados sobre el clima.",
+        "github" : "https://github.com/Joel-Moron/App-Clima",
+        "url" : "https://app-clima-m.netlify.app/",
+        "tecnologias" : "HTML, CSS, JavaScript, API",
+        "img" : "producto3"
+    },
+    {
+        "nombre" : "CONVERTIDOR DE JSON A CSV",
+        "descripcion" : "Esta herramienta web te permite convertir fácilmente archivos JSON a formato CSV. Simplemente carga tu archivo JSON y obtén una versión en CSV lista para su descarga. Además, esta la opción de descargar el archivo convertido tanto en formato CSV como en XLSX.",
+        "github" : "https://github.com/Joel-Moron/Convertidor_JSON-CSV",
+        "url" : "https://spiffy-boba-e46d64.netlify.app/",
+        "tecnologias" : "HTML, CSS, JavaScript",
+        "img" : "producto4"
+    }
+]

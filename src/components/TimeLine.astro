@@ -1,0 +1,112 @@
+---
+
+---
+
+<section class="max-w-[calc(1100px+4rem)] w-full p-8 justify-around items-center overflow-auto">
+    <div class="flex relative min-w-max w-full justify-around">
+        <div class="timeline bg-[#0f32b0]"></div>
+        <div class="flex gap-5 min-w-max w-full justify-around">
+
+            <div class="conteiner text-center">
+                <h3>Secundaria</h3>
+                <small>2011 - 2018</small>
+                <p class="w-[250px] text-start pt-10">
+                    En la secundaria es donde me inicie en la programación
+                    ya que el ultimo año tuve un curso de programación en el cual desarrolle mi lógica de programación.
+                </p>
+        
+            </div>
+            <div class="conteiner text-center">
+                <h3>Superior</h3>
+                <small>2019 - 2023</small>
+                <p class="w-[250px] text-start pt-10">
+                    Estudie en SENATI, una institucion de gran prestigio
+                    en donde aprendi a adaptarme a las diferentes tecnologias de desarrollo
+                    para resolver problemas de manera eficiente.
+                </p>
+        
+            </div>
+            <div class="conteiner text-center">
+                <h3>Getbyte (practicas)</h3>
+                <small>2023</small>
+                <p class="w-[250px] text-start pt-10">
+                    He trabajado en el desarrollo de aplicaciones web,
+                    tanto backend como frontend, ademas de liderar un grupo
+                    encargado de agregar funcionalidades y el consumo de apis.
+                </p>
+        
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+<style>
+    section{
+
+    }
+
+    .timeline{
+        border-radius: 5px;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        left: 0px;
+        top: 70px;
+        animation: moveline 3s linear forwards;
+    }
+
+    .conteiner{
+        position: relative;
+        opacity: 0;
+        animation: visibleconteiner 1s linear forwards;
+    }
+
+    .conteiner::after{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent; /* Tamaño del triángulo */
+        border-right: 20px solid transparent; /* Tamaño del triángulo */
+        border-bottom: 20px solid #0f32b0; /* Altura del triángulo y color de fondo */
+        position: absolute;
+        top: 54px;
+        left: 43%;
+        opacity: 0;
+        animation: visibleconteiner 0.7s linear forwards;
+    }
+
+    .conteiner:nth-child(1){
+        animation-delay: 0.5s;
+    }
+
+    .conteiner:nth-child(2){
+        animation-delay: 1.5s;
+    }
+
+    .conteiner:nth-child(3){
+        animation-delay: 2.5s;
+    }
+
+    @keyframes moveline {
+        0%{
+            width: 0;
+        }
+
+        100%{
+            width: 100%;
+        }
+    }
+
+    @keyframes visibleconteiner {
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
+
+</style>

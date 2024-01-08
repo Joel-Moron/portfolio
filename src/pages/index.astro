@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro"
+import About from "../components/About.astro"
+import Skills from "../components/Skills.astro"
+import Projects from "../components/Projects.astro";
+import TimeLine from "../components/TimeLine.astro";
+import Certificados from "../components/Certificados.astro";
+---
+
+<Layout title="Joel Moron - Portafolio">
+    <Header/>
+    <main class='flex flex-col items-center'>
+        <About/>
+        <TimeLine/>
+        <Skills/>
+        <Projects/>
+        <Certificados/>
+    </main>
+</Layout>

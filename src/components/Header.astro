@@ -1,0 +1,106 @@
+---
+import Curriculum from "../assets/CV-JM.pdf";
+---
+<header class='z-10 bg-[#13151a] border-b-2 border-solid border-[#263243] sticky top-0'>
+    <nav class='flex items-center justify-between px-8 h-[5rem] max-w-[1536px] mx-auto'>
+        <a href="#" class='text-5xl text-[#551A8B]'>JM</a>
+        <div class='flex h-[32px] items-center relative md:hidden' id="content">
+            <div class='flex justify-center hamburger-content'>
+                <span class={`bg-white w-[30px] h-[3px] hamburger`} id="hamburger"></span>
+            </div>
+        </div>
+        <!-- <div class='md:hidden flex relative h-[28px] items-center' id="hamburger"><span class="hamburger"></span></div> -->
+        <ul id="miElemento" class='fixed top-20 left-0 right-0 bottom-0 pt-5 flex flex-col bg-black gap-4 items-center md:flex-row md:bg-inherit md:static'>
+            <li><a href="#">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href={Curriculum} download><button class='border border-solid rounded-lg border-[#3b53a8] p-1 w-14'>CV</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+
+.hamburger-content{
+    position: relative;
+}
+
+.hamburger-content span::before{
+    content: '';
+    top: 10px;
+    width: 15px;
+    height: 3px;
+    position: absolute;
+    background: white;
+    left: 0;
+    transition: transform 1s ;
+}
+
+.hamburger-content span::after{
+    content: '';
+    bottom: 10px;
+    width: 15px;
+    height: 3px;
+    position: absolute;
+    background: white;
+    right: 0;
+    transition: transform 1s;
+}
+
+.hamburger-content span{
+    transition: transform 1s;
+}
+
+.translate-hamburger{
+    transform: rotate(-45deg);
+}
+
+.translate-hamburger::after{
+    transform: translate(-7px, 3px) rotate(-85deg);
+}
+
+.translate-hamburger::before{
+    transform: translate(7px, -3px) rotate(-85deg);
+}
+
+    @media (max-width: 768px) {
+
+        ul{
+            clip-path: circle(0% at top left);
+            transition: clip-path .4s;
+        }
+
+        .visible-menu{
+            clip-path: circle(150% at top left);
+        }
+
+    }
+</style>
+
+<script>
+    const content : any = document.getElementById("content");
+    const hamburger : any = document.getElementById("hamburger");
+    const miElemento : any = document.getElementById("miElemento");
+    const listItem : any = document.querySelectorAll("li");
+    let menuActive : boolean = false;
+
+    content.addEventListener("click", function() {
+        menuActive = !menuActive;
+        if (menuActive) {
+            miElemento.classList.add("visible-menu");
+            hamburger.classList.add("translate-hamburger");
+        } else {
+            miElemento.classList.remove("visible-menu");
+            hamburger.classList.remove("translate-hamburger");
+        }
+    });
+
+    listItem.forEach((item:any) => {
+        item.addEventListener("click", function() {
+            miElemento.classList.remove("visible-menu");
+            hamburger.classList.remove("translate-hamburger");
+            menuActive = !menuActive;
+        })
+    });
+
+</script>
