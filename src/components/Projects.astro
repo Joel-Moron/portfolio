@@ -6,64 +6,97 @@ import Producto2 from "../assets/projects/proyecto2.png";
 import Producto3 from "../assets/projects/proyecto3.png";
 import Producto4 from "../assets/projects/proyecto4.png";
 import Lavanderia from "../assets/projects/lavanderia.png";
+import Tesla from "../assets/projects/tesla.png";
 import GitHub from "../assets/github.svg";
 import Link from "../assets/link.svg";
 
-const dataProjectsfil = dataProjects.map((dataProject) => {
-    const switchFunction = (nombre: string) => {
-        const optionMapping: { [key: string]: any } = {
-            pokedex: Pokedex,
-            registroAlumnos: Producto1,
-            producto2: Producto2,
-            producto3: Producto3,
-            producto4: Producto4,
-            lavanderia: Lavanderia,
-            default: Producto1,
-        };
-        return optionMapping[nombre];
+const getIcon = (nombre: string) => {
+    const optionMapping: { [key: string]: any } = {
+        pokedex: Pokedex,
+        registroAlumnos: Producto1,
+        producto2: Producto2,
+        producto3: Producto3,
+        producto4: Producto4,
+        lavanderia: Lavanderia,
+        tesla: Tesla,
+        default: Producto1,
     };
+    return optionMapping[nombre];
+};
 
+const getImgProject = (nombre: string) => {
+    const optionMapping: { [key: string]: any } = {
+        pokedex: Pokedex,
+        tesla: Tesla,
+        registroAlumnos: Producto1,
+        producto2: Producto2,
+        producto3: Producto3,
+        producto4: Producto4,
+        lavanderia: Lavanderia,
+        default: Producto1,
+    };
+    return optionMapping[nombre];
+};
+
+const dataProjectsfil = dataProjects.map((dataProject) => {
     return {
         nombre: dataProject.nombre,
         descripcion: dataProject.descripcion,
         github: dataProject.github,
         url: dataProject.url,
         tecnologias: dataProject.tecnologias,
-        img: switchFunction(dataProject.img),
+        img: getImgProject(dataProject.img),
     };
 });
 ---
 
 <section
     id="projects"
-    class="max-w-[calc(990px+4rem)] w-full flex flex-col p-8 justify-center items-center pt-24"
+    class="max-w-[calc(990px+4rem)] w-full flex flex-col p-8 justify-center items-center pt-32"
 >
     <div class="w-full title-section relative text-4xl font-bold text-start">
-        <h1>Projects</h1>
+        <h1>Proyectos</h1>
     </div>
-    <div class="flex flex-wrap mt-16 gap-16 justify-around w-full">
+    <div class="flex flex-wrap mt-16 gap-6 justify-around w-full">
         {
-            dataProjectsfil.map((project, index) => (
-                <div class="flex flex-col h-[540px] w-[350px] bg-[#263243] rounded-xl">
+            dataProjectsfil.map((project) => (
+                <div class="relative flex flex-col h-[520px] w-[350px ] md:w-[480px] md:h-[300px] bg-[#263243] rounded-xl group overflow-hidden">
                     <img
-                        class="h-[200px] rounded-t-xl"
+                        class="h-[200px] md:h-full w-full rounded-t-xl md:rounded-xl object-cover"
                         src={project.img?.src}
                     />
-                    <div class="flex flex-col flex-1 p-10 pb-0">
-                        <span class="text-xl">Project #{index + 1}</span>
-                        <h2 class="text-[#6688ff] text-xl">{project.nombre}</h2>
-                        <p>{project.descripcion}</p>
-                    </div>
-                    <div class="px-10 pb-4">
-                        <div class="flex gap-4 pb-2">
-                            <a href={project.github} target="_blank">
-                                <img class="w-[32px]" src={GitHub.src} alt="" />
-                            </a>
-                            <a href={project.url} target="_blank">
-                                <img class="w-[32px]" src={Link.src} alt="" />
-                            </a>
+                    <div
+                        class="flex flex-col flex-1 justify-between bg-[#263243]/[90%] -top-full 
+                        md:absolute md:w-full md:h-full group-hover:top-0 transition-all duration-200"
+                    >
+                        <div class="flex flex-col px-5 pt-5 md:px-10">
+                            <h2 class="text-[#6688ff] text-xl text-center md:text-2xl font-medium">
+                                {project.nombre}
+                            </h2>
+                            <p class="pt-5">{project.descripcion}</p>
                         </div>
-                        <span>{project.tecnologias}</span>
+                        <div class="grid md:flex justify-between gap-3 px-5 pb-4 md:px-10">
+                            <div class="flex gap-5">
+                                {project.tecnologias.map((tercno: any) => (
+                                    <div class=" flex flex-col items-center">
+                                        <img
+                                            class="h-8 "
+                                            src={tercno.src}
+                                            alt={tercno.name}
+                                        />
+                                        <span>{tercno.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div class="flex gap-4">
+                                <a href={project.github} target="_blank">
+                                    <img class="h-8" src={GitHub.src} alt="" />
+                                </a>
+                                <a href={project.url} target="_blank">
+                                    <img class="h-8" src={Link.src} alt="" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             ))

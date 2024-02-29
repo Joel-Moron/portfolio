@@ -1,18 +1,61 @@
 [
     {
+        "nombre": "CLON DE TESLA",
+        "descripcion": "Clon de tesla basado en la pagina de tesla creado con astro",
+        "github": "https://github.com/Joel-Moron/clon-tesla-astro",
+        "url": "https://clon-tesla-joelmo.netlify.app",
+        "tecnologias": [
+            {
+                "src": "/assets/logo-astro.svg",
+                "name": "Astro"
+            },
+            {
+                "src": "/assets/logo-tailwind.svg",
+                "name": "Tailwind"
+            }
+        ],
+        "img": "tesla"
+    },
+    {
         "nombre": "POKEDEX",
         "descripcion": "Aplicativo web que proporciona a los usuarios acceso a información detallada sobre los Pokémon",
         "github": "https://github.com/Joel-Moron/pokedex",
         "url": "https://mo-pokedex.netlify.app",
-        "tecnologias": "React, Axios, PokeAPI, Tailwind",
+        "tecnologias": [
+            {
+                "src": "/assets/logo-react.svg",
+                "name": "React"
+            },
+            {
+                "src": "/assets/logo-pokeapi.png",
+                "name": "Pokeapi"
+            },
+            {
+                "src": "/assets/logo-tailwind.svg",
+                "name": "Tailwind"
+            }
+        ],
         "img": "pokedex"
     },
     {
         "nombre": "REGISTRO DE ALUMNOS",
-        "descripcion": "Una aplicación de escritorio que simplifica el registro de alumnos en escuelas. Con una interfaz intuitiva y generar informes. Ahorra tiempo y esfuerzo al personal escolar, facilitando la gestión de datos de los estudiantes.",
+        "descripcion": "Una aplicación de escritorio que simplifica el registro de alumnos en escuelas y generar informes. Ahorra tiempo y esfuerzo al personal escolar, facilitando la gestión de datos de los estudiantes.",
         "github": "https://github.com/Joel-Moron/Registro-Estudiantes",
         "url": "https://github.com/Joel-Moron/Registro-Estudiantes",
-        "tecnologias": "C#, SQLServer, Crystal Report",
+        "tecnologias": [
+            {
+                "src": "/assets/logo-c--4.svg",
+                "name": "C#"
+            },
+            {
+                "src": "/assets/sql-server.png",
+                "name": "SQLServer"
+            },
+            {
+                "src": "/assets/logo-crystal-reports.png",
+                "name": "Crystal Reports"
+            }
+        ],
         "img": "registroAlumnos"
     },
     {
@@ -20,7 +63,16 @@
         "descripcion": "Una landing page para ofrecer servicios de lavanderia.",
         "github": "https://github.com/Lyonbp/lavanderiaReact",
         "url": "https://lavanderiamanantial.netlify.app",
-        "tecnologias": "React, Tailwind",
+        "tecnologias": [
+            {
+                "src": "/assets/logo-react.svg",
+                "name": "React"
+            },
+            {
+                "src": "/assets/logo-tailwind.svg",
+                "name": "Tailwind"
+            }
+        ],
         "img": "lavanderia"
     },
     {
@@ -28,7 +80,20 @@
         "descripcion": "Una web para obtener información sobre películas. Simplemente introduce el título de la película que deseas encontrar. Encuentra rápidamente las películas que te interesan.",
         "github": "https://github.com/Joel-Moron/Buscador-Peliculas",
         "url": "https://buscador-de-pelis-m.netlify.app/",
-        "tecnologias": "HTML, CSS, JavaScript, API",
+        "tecnologias": [
+            {
+                "src": "/assets/logo-css.svg",
+                "name": "CSS"
+            },
+            {
+                "src": "/assets/logo-astro.svg",
+                "name": "Astro"
+            },
+            {
+                "src": "/assets/logo-api.svg",
+                "name": "Api"
+            }
+        ],
         "img": "producto2"
     },
     {
@@ -36,7 +101,24 @@
         "descripcion": "Una aplicación web de clima te brinda fácil acceso a la información climatica de diversos países. Simplemente ingresa el nombre del país y obtén al instante datos actualizados sobre el clima.",
         "github": "https://github.com/Joel-Moron/App-Clima",
         "url": "https://app-clima-m.netlify.app/",
-        "tecnologias": "HTML, CSS, JavaScript, API",
+        "tecnologias": [
+            {
+                "src": "/assets/logo-astro.svg",
+                "name": "Astro"
+            },
+            {
+                "src": "/assets/logo-css.svg",
+                "name": "CSS"
+            },
+            {
+                "src": "/assets/logo-js.svg",
+                "name": "JavaScript"
+            },
+            {
+                "src": "/assets/logo_white_cropped.png",
+                "name": "Api"
+            }
+        ],
         "img": "producto3"
     }
 ]
