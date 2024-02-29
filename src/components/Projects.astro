@@ -1,42 +1,5 @@
 ---
 import dataProjects from "../services/dataProjects.json";
-import Pokedex from "../assets/projects/project-pokedex.png";
-import Producto1 from "../assets/projects/proyecto1.png";
-import Producto2 from "../assets/projects/proyecto2.png";
-import Producto3 from "../assets/projects/proyecto3.png";
-import Producto4 from "../assets/projects/proyecto4.png";
-import Lavanderia from "../assets/projects/lavanderia.png";
-import Tesla from "../assets/projects/tesla.png";
-import GitHub from "../assets/github.svg";
-import Link from "../assets/link.svg";
-
-const getIcon = (nombre: string) => {
-    const optionMapping: { [key: string]: any } = {
-        pokedex: Pokedex,
-        registroAlumnos: Producto1,
-        producto2: Producto2,
-        producto3: Producto3,
-        producto4: Producto4,
-        lavanderia: Lavanderia,
-        tesla: Tesla,
-        default: Producto1,
-    };
-    return optionMapping[nombre];
-};
-
-const getImgProject = (nombre: string) => {
-    const optionMapping: { [key: string]: any } = {
-        pokedex: Pokedex,
-        tesla: Tesla,
-        registroAlumnos: Producto1,
-        producto2: Producto2,
-        producto3: Producto3,
-        producto4: Producto4,
-        lavanderia: Lavanderia,
-        default: Producto1,
-    };
-    return optionMapping[nombre];
-};
 
 const dataProjectsfil = dataProjects.map((dataProject) => {
     return {
@@ -45,14 +8,14 @@ const dataProjectsfil = dataProjects.map((dataProject) => {
         github: dataProject.github,
         url: dataProject.url,
         tecnologias: dataProject.tecnologias,
-        img: getImgProject(dataProject.img),
+        img: dataProject.img,
     };
 });
 ---
 
 <section
     id="projects"
-    class="max-w-[calc(990px+4rem)] w-full flex flex-col p-8 justify-center items-center pt-32"
+    class="max-w-[calc(990px+4rem)] w-full flex flex-col p-8 justify-center items-center pt-28"
 >
     <div class="w-full title-section relative text-4xl font-bold text-start">
         <h1>Proyectos</h1>
@@ -60,10 +23,10 @@ const dataProjectsfil = dataProjects.map((dataProject) => {
     <div class="flex flex-wrap mt-16 gap-6 justify-around w-full">
         {
             dataProjectsfil.map((project) => (
-                <div class="relative flex flex-col h-[520px] w-[350px ] md:w-[480px] md:h-[300px] bg-[#263243] rounded-xl group overflow-hidden">
+                <div class="max-w-[380px] md:max-w-full relative flex flex-col h-[520px] w-[350px ] md:w-[480px] md:h-[300px] bg-[#263243] rounded-xl group overflow-hidden">
                     <img
                         class="h-[200px] md:h-full w-full rounded-t-xl md:rounded-xl object-cover"
-                        src={project.img?.src}
+                        src={project.img}
                     />
                     <div
                         class="flex flex-col flex-1 justify-between bg-[#263243]/[90%] -top-full 
@@ -90,11 +53,23 @@ const dataProjectsfil = dataProjects.map((dataProject) => {
                             </div>
                             <div class="flex gap-4">
                                 <a href={project.github} target="_blank">
-                                    <img class="h-8" src={GitHub.src} alt="" />
+                                    <img
+                                        class="h-8"
+                                        src="/assets/logos/github.svg"
+                                        alt=""
+                                    />
+                                    <span>Code</span>
                                 </a>
-                                <a href={project.url} target="_blank">
-                                    <img class="h-8" src={Link.src} alt="" />
-                                </a>
+                                {project.url && (
+                                    <a href={project.url} target="_blank">
+                                        <img
+                                            class="h-8"
+                                            src="/assets/logos/link.svg"
+                                            alt=""
+                                        />
+                                        <span>Web</span>
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>

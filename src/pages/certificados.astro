@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+const Certificates: { name: string; url: string }[] = [
+    {
+        name: "Metodologia Scrum",
+        url: "https://i.ibb.co/f29fg7t/Certificate.jpg",
+    },
+    {
+        name: "Ciencia de datos",
+        url: "https://i.ibb.co/hDSWMy9/Introduction-to-Data-Science-Badge20231022-31-jk6i0s.jpg",
+    },
+    {
+        name: "Ciber seguridad",
+        url: "https://i.ibb.co/wLYxvLW/ciber-seguridad.jpg",
+    },
+    {
+        name: "Get Connected",
+        url: "https://i.ibb.co/qpf1Msj/get-connected.jpg",
+    },
+    {
+        name: "IoT",
+        url: "https://i.ibb.co/9YX28y0/internet-del-todo.jpg",
+    },
+    {
+        name: "Python",
+        url: "https://i.ibb.co/7vG42KY/phyton.jpg",
+    },
+];
+---
+
+<Layout title="Joel Moron - Certificados">
+    <div class="h-screen w-screen relative">
+        <div class="flex w-full p-5">
+            <a class="flex items-center gap-5" href="/">
+                <img
+                    class="h-8 animate-back"
+                    src="/assets/iconos/arrow_back_icon.svg"
+                    alt="back"
+                />Ir a Portfolio</a
+            >
+        </div>
+        <main
+            class="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-8 px-3 md:px-28 place-items-center place-content-center w-full"
+        >
+            {
+                Certificates.map((certificate, index) => (
+                    <div class=" rounded-lg">
+                        <h2 class="text-center text-xl">{certificate.name}</h2>
+                        <div class=" max-w-[500px] md:h-[350px] rounded-lg overflow-hidden">
+                            <img
+                                img-index={index}
+                                class="certificate cursor-pointer md:hover:scale-[1.1] transition-all duration-300"
+                                src={certificate.url}
+                                alt="#"
+                            />
+                        </div>
+                    </div>
+                ))
+            }
+        </main>
+        <div
+            id="modal"
+            modal-visible="true"
+            class="hidden w-screen h-screen top-0 left-0 bg-black/[.8] absolute z-10"
+        >
+            <img
+                id="modal-image"
+                class="absolute w-[90%] md:w-auto md:h-[90vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white z-20"
+                src="https://i.ibb.co/f29fg7t/Certificate.jpg"
+            />
+        </div>
+    </div>
+</Layout>
+
+<style>
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: translatex(-25%);
+            animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
+        }
+        50% {
+            transform: translatex(25%);
+            animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+        }
+    }
+    .animate-back {
+        animation: bounce 1s infinite;
+    }
+</style>
+
+<script>
+    let listUrl: string[] = [
+        "https://i.ibb.co/f29fg7t/Certificate.jpg",
+        "https://i.ibb.co/hDSWMy9/Introduction-to-Data-Science-Badge20231022-31-jk6i0s.jpg",
+        "https://i.ibb.co/wLYxvLW/ciber-seguridad.jpg",
+        "https://i.ibb.co/qpf1Msj/get-connected.jpg",
+        "https://i.ibb.co/9YX28y0/internet-del-todo.jpg",
+        "https://i.ibb.co/7vG42KY/phyton.jpg",
+    ];
+    const modal = document.querySelector("#modal") as HTMLElement;
+    const modalImage = document.querySelector("#modal-image") as HTMLElement;
+
+    modal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    const elementos = document.querySelectorAll(".certificate");
+    console.log(elementos);
+
+    elementos.forEach((elemento, index) => {
+        elemento.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+            modalImage.setAttribute("src", listUrl[index]);
+        });
+    });
+</script>

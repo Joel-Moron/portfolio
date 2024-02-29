@@ -1,20 +1,20 @@
 [
     {
         "nombre": "CLON DE TESLA",
-        "descripcion": "Clon de tesla basado en la pagina de tesla creado con astro",
+        "descripcion": "Desarrollé un clon de la página de Tesla con Astro y Tailwind, con énfasis en eficiencia, rendimiento y detalles de diseño para una experiencia auténtica.",
         "github": "https://github.com/Joel-Moron/clon-tesla-astro",
         "url": "https://clon-tesla-joelmo.netlify.app",
         "tecnologias": [
             {
-                "src": "/assets/logo-astro.svg",
+                "src": "/assets/logos/logo-astro.svg",
                 "name": "Astro"
             },
             {
-                "src": "/assets/logo-tailwind.svg",
+                "src": "/assets/logos/logo-tailwind.svg",
                 "name": "Tailwind"
             }
         ],
-        "img": "tesla"
+        "img": "/assets/projects/tesla.webp"
     },
     {
         "nombre": "POKEDEX",
@@ -23,40 +23,40 @@
         "url": "https://mo-pokedex.netlify.app",
         "tecnologias": [
             {
-                "src": "/assets/logo-react.svg",
+                "src": "/assets/logos/logo-react.svg",
                 "name": "React"
             },
             {
-                "src": "/assets/logo-pokeapi.png",
+                "src": "/assets/logos/logo-pokeapi.png",
                 "name": "Pokeapi"
             },
             {
-                "src": "/assets/logo-tailwind.svg",
+                "src": "/assets/logos/logo-tailwind.svg",
                 "name": "Tailwind"
             }
         ],
-        "img": "pokedex"
+        "img": "/assets/projects/project-pokedex.webp"
     },
     {
         "nombre": "REGISTRO DE ALUMNOS",
         "descripcion": "Una aplicación de escritorio que simplifica el registro de alumnos en escuelas y generar informes. Ahorra tiempo y esfuerzo al personal escolar, facilitando la gestión de datos de los estudiantes.",
         "github": "https://github.com/Joel-Moron/Registro-Estudiantes",
-        "url": "https://github.com/Joel-Moron/Registro-Estudiantes",
+        "url": "",
         "tecnologias": [
             {
-                "src": "/assets/logo-c--4.svg",
+                "src": "/assets/logos/logo-c--4.svg",
                 "name": "C#"
             },
             {
-                "src": "/assets/sql-server.png",
+                "src": "/assets/logos/sql-server.png",
                 "name": "SQLServer"
             },
             {
-                "src": "/assets/logo-crystal-reports.png",
+                "src": "/assets/logos/logo-crystal-reports.png",
                 "name": "Crystal Reports"
             }
         ],
-        "img": "registroAlumnos"
+        "img": "/assets/projects/proyecto1.webp"
     },
     {
         "nombre": "LAVANDERIA MANANTIAL",
@@ -65,15 +65,15 @@
         "url": "https://lavanderiamanantial.netlify.app",
         "tecnologias": [
             {
-                "src": "/assets/logo-react.svg",
+                "src": "/assets/logos/logo-react.svg",
                 "name": "React"
             },
             {
-                "src": "/assets/logo-tailwind.svg",
+                "src": "/assets/logos/logo-tailwind.svg",
                 "name": "Tailwind"
             }
         ],
-        "img": "lavanderia"
+        "img": "/assets/projects/lavanderia.webp"
     },
     {
         "nombre": "BUSCADOR DE PELICULAS",
@@ -82,19 +82,19 @@
         "url": "https://buscador-de-pelis-m.netlify.app/",
         "tecnologias": [
             {
-                "src": "/assets/logo-css.svg",
+                "src": "/assets/logos/logo-css.svg",
                 "name": "CSS"
             },
             {
-                "src": "/assets/logo-astro.svg",
+                "src": "/assets/logos/logo-astro.svg",
                 "name": "Astro"
             },
             {
-                "src": "/assets/logo-api.svg",
+                "src": "/assets/logos/logo-api.svg",
                 "name": "Api"
             }
         ],
-        "img": "producto2"
+        "img": "/assets/projects/proyecto2.webp"
     },
     {
         "nombre": "APP WEB DE CLIMA",
@@ -103,22 +103,22 @@
         "url": "https://app-clima-m.netlify.app/",
         "tecnologias": [
             {
-                "src": "/assets/logo-astro.svg",
+                "src": "/assets/logos/logo-astro.svg",
                 "name": "Astro"
             },
             {
-                "src": "/assets/logo-css.svg",
+                "src": "/assets/logos/logo-css.svg",
                 "name": "CSS"
             },
             {
-                "src": "/assets/logo-js.svg",
+                "src": "/assets/logos/logo-js.svg",
                 "name": "JavaScript"
             },
             {
-                "src": "/assets/logo_white_cropped.png",
+                "src": "/assets/logos/logo_white_cropped.png",
                 "name": "Api"
             }
         ],
-        "img": "producto3"
+        "img": "/assets/projects/proyecto3.webp"
     }
 ]
