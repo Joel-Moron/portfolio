@@ -53,5 +53,15 @@
         "nombre": "POSTGRE",
         "img": "https://i.ibb.co/44bkmzN/postgresql.png",
         "area": "back-end"
+    },
+    {
+        "nombre": "POSTMAN",
+        "img": "/assets/logos/logo-postman.svg",
+        "area": "back-end"
+    },
+    {
+        "nombre": "GIT",
+        "img": "/assets/logos/logo-git.png",
+        "area": "back-end"
     }
 ]

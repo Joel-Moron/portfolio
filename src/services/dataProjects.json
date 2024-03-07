@@ -82,12 +82,16 @@
         "url": "https://buscador-de-pelis-m.netlify.app/",
         "tecnologias": [
             {
+                "src": "/assets/logos/logo-html.svg",
+                "name": "HTML"
+            },
+            {
                 "src": "/assets/logos/logo-css.svg",
                 "name": "CSS"
             },
             {
-                "src": "/assets/logos/logo-astro.svg",
-                "name": "Astro"
+                "src": "/assets/logos/logo-js.svg",
+                "name": "JavaScript"
             },
             {
                 "src": "/assets/logos/logo-api.svg",
@@ -103,8 +107,8 @@
         "url": "https://app-clima-m.netlify.app/",
         "tecnologias": [
             {
-                "src": "/assets/logos/logo-astro.svg",
-                "name": "Astro"
+                "src": "/assets/logos/logo-html.svg",
+                "name": "HTML"
             },
             {
                 "src": "/assets/logos/logo-css.svg",

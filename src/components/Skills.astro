@@ -18,46 +18,22 @@ const dataSkillsBack = dataSkills.filter(
     <div class="w-full title-section relative text-4xl font-bold text-start">
         <h1>Tecnologías</h1>
     </div>
-    <div
-        class="w-full flex flex-col md:flex-row flex-wrap mt-16 justify-around"
-    >
-        <div class="flex flex-col flex-1">
-            <h3 class="text-center text-2xl font-bold">FRON-END</h3>
-            <div class="flex flex-wrap p-4 gap-4 justify-center items-center">
-                {
-                    dataSkillsFront.map((data) => (
-                        <div class=" flex flex-col justify-center items-center min-w-[120px]">
-                            <div class="h-[100px] flex items-center">
-                                <img
-                                    class="w-[64px] h-auto"
-                                    src={data.img}
-                                    alt={data.nombre}
-                                />
-                            </div>
-                            <h4 class="text-center font-bold">{data.nombre}</h4>
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
-        <div class="flex flex-col flex-1 pt-7 md:pt-0">
-            <h3 class="text-center text-2xl font-bold">BACK-END</h3>
-            <div class="flex flex-wrap p-4 gap-4 justify-center items-center">
-                {
-                    dataSkillsBack.map((data) => (
-                        <div class=" flex flex-col items-center min-w-[120px]">
-                            <div class="h-[100px] flex items-center">
-                                <img
-                                    class="w-[64px] h-auto"
-                                    src={data.img}
-                                    alt={data.nombre}
-                                />
-                            </div>
-                            <h4 class="text-center font-bold">{data.nombre}</h4>
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
+    <div class="w-full grid grid-cols-3 lg:grid-cols-5 mt-16">
+        {
+            dataSkills.map((data) => (
+                <div class="relative flex flex-col justify-center items-center sm:min-w-[120px] group">
+                    <div class="h-[60px] mt-5 sm:h-[100px] flex items-center">
+                        <img
+                            class="w-[32px] sm:w-[64px] h-auto"
+                            src={data.img}
+                            alt={data.nombre}
+                        />
+                    </div>
+                    <h4 class=" sm:opacity-0 sm:absolute text-xs sm:text-base text-center font-bold sm:group-hover:-translate-y-10 sm:group-hover:opacity-100 transition-[opacity,transform] duration-500">
+                        {data.nombre}
+                    </h4>
+                </div>
+            ))
+        }
     </div>
 </section>
