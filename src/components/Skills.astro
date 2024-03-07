@@ -1,14 +1,5 @@
 ---
 import dataSkills from "../services/dataSkills.json";
-const dataSkillsFront = dataSkills.filter(
-    (dataSkill) => dataSkill.area === "font-end",
-);
-const dataSkillsBack = dataSkills.filter(
-    (dataSkill) =>
-        dataSkill.area === "back-end" &&
-        dataSkill.nombre !== "JAVA" &&
-        dataSkill.nombre !== "C#",
-);
 ---
 
 <section
