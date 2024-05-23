@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Scrum",
+        "img": "/assets/certificates/ciberSeguridad.webp"
+    },
+    {
+        "nombre": "Ciencia de datos",
+        "img": "/assets/certificates/dataScience.webp"
+    },
+    {
+        "nombre": "Ciber Seguridad",
+        "img": "/assets/certificates/ciberSeguridad.webp"
+    },
+    {
+        "nombre": "Introduccion a python",
+        "img": "/assets/certificates/python.webp"
+    },
+    {
+        "nombre": "Profecional de python",
+        "img": "/assets/certificates/profesionalPython.webp"
+    },
+    {
+        "nombre": "profesional de php",
+        "img": "/assets/certificates/profesionalPHP.webp"
+    }
+]

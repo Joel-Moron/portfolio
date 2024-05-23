@@ -2,28 +2,28 @@
 import Layout from "../layouts/Layout.astro";
 const Certificates: { name: string; url: string }[] = [
     {
-        name: "Metodologia Scrum",
-        url: "https://i.ibb.co/f29fg7t/Certificate.jpg",
+        name: "Scrum",
+        url: "/assets/certificates/scrum.webp",
     },
     {
         name: "Ciencia de datos",
-        url: "https://i.ibb.co/hDSWMy9/Introduction-to-Data-Science-Badge20231022-31-jk6i0s.jpg",
+        url: "/assets/certificates/dataScience.webp",
     },
     {
-        name: "Ciber seguridad",
-        url: "https://i.ibb.co/wLYxvLW/ciber-seguridad.jpg",
+        name: "Ciber Seguridad",
+        url: "/assets/certificates/ciberSeguridad.webp",
     },
     {
-        name: "Get Connected",
-        url: "https://i.ibb.co/qpf1Msj/get-connected.jpg",
+        name: "Introduccion a python",
+        url: "/assets/certificates/python.webp",
     },
     {
-        name: "IoT",
-        url: "https://i.ibb.co/9YX28y0/internet-del-todo.jpg",
+        name: "Profecional de python",
+        url: "/assets/certificates/profesionalPython.webp",
     },
     {
-        name: "Python",
-        url: "https://i.ibb.co/7vG42KY/phyton.jpg",
+        name: "Profesional de PHP",
+        url: "/assets/certificates/profesionalPHP.webp",
     },
 ];
 ---
@@ -46,7 +46,7 @@ const Certificates: { name: string; url: string }[] = [
                 Certificates.map((certificate, index) => (
                     <div class=" rounded-lg">
                         <h2 class="text-center text-xl">{certificate.name}</h2>
-                        <div class=" max-w-[500px] xl:h-[350px] 2xl:h-[300px] min-[1770px]:h-[350px] rounded-lg overflow-hidden">
+                        <div class=" max-w-[500px] xl:h-[350px] 2xl:h-[300px] min-[1770px]:h-[350px] rounded-lg overflow-hidden bg-[aliceblue]">
                             <img
                                 img-index={index}
                                 class="certificate object-fill  cursor-pointer md:hover:scale-[1.1] transition-all duration-300"
@@ -63,11 +63,20 @@ const Certificates: { name: string; url: string }[] = [
             modal-visible="true"
             class="hidden w-screen h-screen top-0 left-0 bg-black/[.8] fixed z-10"
         >
-            <img
-                id="modal-image"
-                class="fixed w-[90%] md:w-auto md:h-[90vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white z-20"
-                src="https://i.ibb.co/f29fg7t/Certificate.jpg"
-            />
+            <div
+                class="relative flex justify-center md:h-[90vh] w-full md:w-max top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+                <span
+                    id="hidden-modal"
+                    class="absolute z-50 top-2 right-6 md:right-4 h-7 w-7 text-center rounded-full bg-black/50 cursor-pointer hover:scale-125 duration-300"
+                    >x</span
+                >
+                <img
+                    id="modal-image"
+                    class="w-[90%] md:w-auto h-full bg-white z-30"
+                    src=""
+                />
+            </div>
         </div>
     </div>
 </Layout>
@@ -91,16 +100,16 @@ const Certificates: { name: string; url: string }[] = [
 
 <script>
     let listUrl: string[] = [
-        "https://i.ibb.co/f29fg7t/Certificate.jpg",
-        "https://i.ibb.co/hDSWMy9/Introduction-to-Data-Science-Badge20231022-31-jk6i0s.jpg",
-        "https://i.ibb.co/wLYxvLW/ciber-seguridad.jpg",
-        "https://i.ibb.co/qpf1Msj/get-connected.jpg",
-        "https://i.ibb.co/9YX28y0/internet-del-todo.jpg",
-        "https://i.ibb.co/7vG42KY/phyton.jpg",
+        "/assets/certificates/scrum.webp",
+        "/assets/certificates/dataScience.webp",
+        "/assets/certificates/ciberSeguridad.webp",
+        "/assets/certificates/python.webp",
+        "/assets/certificates/profesionalPython.webp",
+        "/assets/certificates/profesionalPHP.webp",
     ];
     const modal = document.querySelector("#modal") as HTMLElement;
     const modalImage = document.querySelector("#modal-image") as HTMLElement;
-
+    const hiddenModal = document.querySelector("#hidden-modal") as HTMLElement;
 
     const elementos = document.querySelectorAll(".certificate");
     console.log(elementos);
@@ -110,5 +119,9 @@ const Certificates: { name: string; url: string }[] = [
             modal.classList.remove("hidden");
             modalImage.setAttribute("src", listUrl[index]);
         });
+    });
+
+    hiddenModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
     });
 </script>

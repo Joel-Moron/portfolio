@@ -15,19 +15,14 @@
         "area": "font-end"
     },
     {
+        "nombre": "PHP",
+        "img": "/assets/logos/php.png",
+        "area": "back-end"
+    },
+    {
         "nombre": "REACT JS",
         "img": "/assets/logos/logo-react.svg",
         "area": "font-end"
-    },
-    {
-        "nombre": "BOOTSTRAP",
-        "img": "https://i.ibb.co/x242F7Z/bootstrap-4.png",
-        "area": "font-end"
-    },
-    {
-        "nombre": "PHP",
-        "img": "https://i.ibb.co/xXPB8m9/php.png",
-        "area": "back-end"
     },
     {
         "nombre": "LARAVEL",
@@ -35,23 +30,33 @@
         "area": "back-end"
     },
     {
+        "nombre": "ASTRO",
+        "img": "/assets/logos/logo-astro.svg",
+        "area": "font-end"
+    },
+    {
+        "nombre": "BOOTSTRAP",
+        "img": "/assets/logos/bootstrap.png",
+        "area": "font-end"
+    },
+    {
+        "nombre": "TAILWIND",
+        "img": "/assets/logos/logo-tailwind.svg",
+        "area": "font-end"
+    },
+    {
         "nombre": "MYSQL",
         "img": "/assets/logos/logo-mysql.png",
         "area": "back-end"
     },
     {
-        "nombre": "JAVA",
-        "img": "https://i.ibb.co/WDyD2bp/java-14.png",
-        "area": "back-end"
-    },
-    {
-        "nombre": "C#",
-        "img": "/assets/logos/logo-c--4.svg",
+        "nombre": "SQLServer",
+        "img": "/assets/logos/sql-server.png",
         "area": "back-end"
     },
     {
         "nombre": "POSTGRE",
-        "img": "https://i.ibb.co/44bkmzN/postgresql.png",
+        "img": "/assets/logos/postgreSQL.png",
         "area": "back-end"
     },
     {
